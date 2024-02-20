@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000551] (-) JobUnselected: {'identifier': 'action_commands'}
+[0.000956] (-) JobUnselected: {'identifier': 'autonomous_mode'}
+[0.001048] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.001096] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.001138] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.001687] (-) EventReactorShutdown: {}

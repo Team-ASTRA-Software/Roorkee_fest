@@ -1,0 +1,117 @@
+[0.086s] Invoking command in '/home/anmol/autonomous_iit/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/anmol/autonomous_iit/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/anmol/autonomous_iit/install/px4_ros_com
+[0.171s] -- The C compiler identification is GNU 11.4.0
+[0.252s] -- The CXX compiler identification is GNU 11.4.0
+[0.262s] -- Detecting C compiler ABI info
+[0.377s] -- Detecting C compiler ABI info - done
+[0.386s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.387s] -- Detecting C compile features
+[0.387s] -- Detecting C compile features - done
+[0.391s] -- Detecting CXX compiler ABI info
+[0.517s] -- Detecting CXX compiler ABI info - done
+[0.527s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.527s] -- Detecting CXX compile features
+[0.528s] -- Detecting CXX compile features - done
+[0.533s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.779s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.917s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.974s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.985s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.000s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.021s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.052s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.083s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.101s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.105s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.246s] -- Found px4_msgs: 2.0.1 (/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/cmake)
+[1.296s] -- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+[1.403s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.409s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.639s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.686s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.767s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.787s] -- Looking for pthread.h
+[1.909s] -- Looking for pthread.h - found
+[1.909s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.026s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.027s] -- Found Threads: TRUE  
+[2.215s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.344s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.474s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.483s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.483s] -- Configured cppcheck include dirs: /home/anmol/autonomous_iit/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/anmol/autonomous_iit/src/px4_ros_com/include/px4_ros_com>
+[2.483s] -- Configured cppcheck exclude dirs and/or files: 
+[2.492s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.492s] -- Configured cpplint exclude dirs and/or files: 
+[2.494s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.496s] -- Added test 'lint_cmake' to check CMake code style
+[2.498s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.506s] -- Added test 'uncrustify' to check C / C++ code style
+[2.507s] -- Configured uncrustify additional arguments: 
+[2.508s] -- Added test 'xmllint' to check XML markup files
+[2.511s] -- Configuring done
+[2.542s] -- Generating done
+[2.545s] -- Build files have been written to: /home/anmol/autonomous_iit/build/px4_ros_com
+[2.560s] Invoked command in '/home/anmol/autonomous_iit/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/anmol/autonomous_iit/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/anmol/autonomous_iit/install/px4_ros_com
+[2.563s] Invoking command in '/home/anmol/autonomous_iit/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_ros_com -- -j12 -l12
+[2.645s] [ 20%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[2.646s] [ 20%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[2.646s] [ 30%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[2.647s] [ 50%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[2.647s] [ 50%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[7.928s] [ 60%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[8.287s] [ 60%] Built target debug_vect_advertiser
+[8.550s] [ 70%] [32m[1mLinking CXX executable offboard_control[0m
+[8.853s] [ 70%] Built target offboard_control
+[10.478s] [ 80%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[10.834s] [ 80%] Built target frame_transforms
+[11.334s] [ 90%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[11.460s] [100%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[11.766s] [100%] Built target sensor_combined_listener
+[11.881s] [100%] Built target vehicle_gps_position_listener
+[11.898s] Invoked command in '/home/anmol/autonomous_iit/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_ros_com -- -j12 -l12
+[11.956s] Invoking command in '/home/anmol/autonomous_iit/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_ros_com
+[11.966s] -- Install configuration: ""
+[11.966s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[11.971s] -- Set runtime path of "/home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[11.971s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[11.975s] -- Set runtime path of "/home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[11.975s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[11.977s] -- Set runtime path of "/home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[11.977s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[11.979s] -- Set runtime path of "/home/anmol/autonomous_iit/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[11.979s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[11.979s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[11.979s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/include/px4_ros_com
+[11.980s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[11.980s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/lib/libframe_transforms.so
+[11.985s] -- Set runtime path of "/home/anmol/autonomous_iit/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[11.985s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//launch
+[11.985s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[11.985s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[11.985s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//test
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[11.986s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[11.987s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[11.987s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[11.987s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[11.987s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[11.987s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.dsv
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[11.988s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[11.989s] -- Installing: /home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.xml
+[11.992s] Invoked command in '/home/anmol/autonomous_iit/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_ros_com

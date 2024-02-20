@@ -1,0 +1,23 @@
+[0.902s] Invoking command in '/home/anmol/autonomous_iit/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/autonomous_iit/install/autonomous_mode:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_msgs -- -j12 -l12
+[2.326s] [  0%] Built target px4_msgs__cpp
+[2.470s] [ 12%] Built target px4_msgs__rosidl_generator_c
+[2.755s] [ 25%] Built target px4_msgs__rosidl_typesupport_c
+[2.766s] [ 37%] Built target px4_msgs__rosidl_typesupport_cpp
+[2.805s] [ 37%] Built target ament_cmake_python_copy_px4_msgs
+[2.810s] [ 49%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp
+[2.825s] [ 62%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[2.839s] [ 75%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[2.924s] [ 88%] Built target px4_msgs__rosidl_typesupport_fastrtps_c
+[2.987s] [ 88%] Built target px4_msgs
+[3.077s] [ 88%] Built target px4_msgs__py
+[3.297s] [100%] Built target px4_msgs__rosidl_generator_py
+[3.349s] running egg_info
+[3.351s] writing px4_msgs.egg-info/PKG-INFO
+[3.351s] writing dependency_links to px4_msgs.egg-info/dependency_links.txt
+[3.351s] writing top-level names to px4_msgs.egg-info/top_level.txt
+[3.361s] reading manifest file 'px4_msgs.egg-info/SOURCES.txt'
+[3.363s] [100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext
+[3.363s] [100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[3.364s] [100%] Built target px4_msgs__rosidl_typesupport_c__pyext
+[3.368s] writing manifest file 'px4_msgs.egg-info/SOURCES.txt'
+[3.427s] [100%] Built target ament_cmake_python_build_px4_msgs_egg

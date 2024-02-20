@@ -1,0 +1,5 @@
+[console_scripts]
+gps_logger = autonomous_mode.gps_logger:main
+gps_logger_switch = autonomous_mode.gps_logger_switch:main
+key_input = autonomous_mode.key_input:main
+

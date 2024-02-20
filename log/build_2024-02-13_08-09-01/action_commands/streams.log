@@ -1,0 +1,69 @@
+[0.064s] Invoking command in '/home/anmol/autonomous_iit/build/action_commands': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/action_commands -- -j12 -l12
+[0.116s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.273s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.337s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.340s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.343s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.383s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.685s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.865s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.103s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.125s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.147s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.147s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.147s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.171s] -- Added test 'lint_cmake' to check CMake code style
+[1.172s] -- Added test 'xmllint' to check XML markup files
+[1.178s] -- Configuring done
+[1.224s] -- Generating done
+[1.228s] -- Build files have been written to: /home/anmol/autonomous_iit/build/action_commands
+[1.260s] [35m[1mConsolidate compiler generated dependencies of target action_commands__rosidl_generator_c[0m
+[1.272s] [  2%] Built target action_commands__cpp
+[1.275s] [  5%] [32mBuilding C object CMakeFiles/action_commands__rosidl_generator_c.dir/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c.o[0m
+[1.283s] [  5%] Built target ament_cmake_python_copy_action_commands
+[1.285s] [35m[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_fastrtps_cpp[0m
+[1.285s] [35m[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_introspection_cpp[0m
+[1.285s] [35m[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_cpp[0m
+[1.300s] In file included from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.h:19[m[K,
+[1.300s]                  from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c:4[m[K:
+[1.300s] [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kgeographic_msgs/msg/detail/geo_pose__struct.h: No such file or directory
+[1.300s]    22 | #include [01;31m[K"geographic_msgs/msg/detail/geo_pose__struct.h"[m[K
+[1.300s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.301s] compilation terminated.
+[1.302s] gmake[2]: *** [CMakeFiles/action_commands__rosidl_generator_c.dir/build.make:142: CMakeFiles/action_commands__rosidl_generator_c.dir/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c.o] Error 1
+[1.302s] gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/action_commands__rosidl_generator_c.dir/all] Error 2
+[1.302s] gmake[1]: *** Waiting for unfinished jobs....
+[1.304s] [ 12%] [32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp.o[0m
+[1.304s] [ 12%] [32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp.o[0m
+[1.304s] [ 12%] [32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp.o[0m
+[1.383s] In file included from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp:7[m[K:
+[1.383s] [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeographic_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory
+[1.383s]    20 | #include [01;31m[K"geographic_msgs/msg/detail/geo_pose__struct.hpp"[m[K
+[1.383s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.383s] In file included from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/follow_gps_waypoints__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+[1.383s]                  from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp:4[m[K:
+[1.383s] [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeographic_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory
+[1.384s]    20 | #include [01;31m[K"geographic_msgs/msg/detail/geo_pose__struct.hpp"[m[K
+[1.384s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.384s] compilation terminated.
+[1.384s] compilation terminated.
+[1.385s] gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/build.make:119: CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp.o] Error 1
+[1.385s] gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/build.make:111: CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp.o] Error 1
+[1.385s] gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/all] Error 2
+[1.385s] gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+[1.388s] In file included from [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp:12[m[K:
+[1.389s] [01m[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeographic_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory
+[1.389s]    20 | #include [01;31m[K"geographic_msgs/msg/detail/geo_pose__struct.hpp"[m[K
+[1.389s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.389s] compilation terminated.
+[1.391s] gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/build.make:119: CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp.o] Error 1
+[1.391s] gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+[1.510s] running egg_info
+[1.511s] writing action_commands.egg-info/PKG-INFO
+[1.511s] writing dependency_links to action_commands.egg-info/dependency_links.txt
+[1.511s] writing top-level names to action_commands.egg-info/top_level.txt
+[1.514s] reading manifest file 'action_commands.egg-info/SOURCES.txt'
+[1.514s] writing manifest file 'action_commands.egg-info/SOURCES.txt'
+[1.546s] [ 12%] Built target ament_cmake_python_build_action_commands_egg
+[1.548s] gmake: *** [Makefile:146: all] Error 2
+[1.552s] Invoked command in '/home/anmol/autonomous_iit/build/action_commands' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/action_commands -- -j12 -l12

@@ -1,0 +1,2 @@
+Invoking command in '/home/anmol/autonomous_iit/build/action_commands': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/action_commands -- -j12 -l12
+Invoked command in '/home/anmol/autonomous_iit/build/action_commands' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/action_commands -- -j12 -l12

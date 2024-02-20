@@ -1,0 +1,354 @@
+[1.082s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.082s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb2f2f8a770>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb2f2f8b3d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb2f2f8b3d0>>)
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.135s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/anmol/autonomous_iit'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.149s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extensions ['ignore', 'ignore_ament_install']
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extension 'ignore'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extension 'ignore_ament_install'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extensions ['colcon_pkg']
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extension 'colcon_pkg'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extensions ['colcon_meta']
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extension 'colcon_meta'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extensions ['ros']
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_mode) by extension 'ros'
+[1.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autonomous_mode' with type 'ros.ament_python' and name 'autonomous_mode'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[1.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[1.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extension 'ignore'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extension 'ignore_ament_install'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extensions ['colcon_pkg']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extension 'colcon_pkg'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extensions ['colcon_meta']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extension 'colcon_meta'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extensions ['ros']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/tutorial_interfaces) by extension 'ros'
+[1.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tutorial_interfaces' with type 'ros.ament_cmake' and name 'tutorial_interfaces'
+[1.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.272s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/anmol/ws_offboard_control/install
+[1.286s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 296 installed packages in /opt/ros/humble
+[1.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.394s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'tutorial_interfaces' is in: /home/anmol/ws_offboard_control/install/tutorial_interfaces
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding tutorial_interfaces
+
+This may be promoted to an error in a future release of colcon-override-check.
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_args' from command line to 'None'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_target' from command line to 'None'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_clean_cache' from command line to 'False'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_clean_first' from command line to 'False'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'cmake_force_configure' from command line to 'False'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'ament_cmake_args' from command line to 'None'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'catkin_cmake_args' from command line to 'None'
+[1.408s] Level 5:colcon.colcon_core.verb:set package 'autonomous_mode' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.408s] DEBUG:colcon.colcon_core.verb:Building package 'autonomous_mode' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anmol/autonomous_iit/build/autonomous_mode', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anmol/autonomous_iit/install/autonomous_mode', 'merge_install': False, 'path': '/home/anmol/autonomous_iit/src/autonomous_mode', 'symlink_install': False, 'test_result_base': None}
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.421s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.421s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anmol/autonomous_iit/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anmol/autonomous_iit/install/px4_msgs', 'merge_install': False, 'path': '/home/anmol/autonomous_iit/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.435s] Level 5:colcon.colcon_core.verb:set package 'tutorial_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.435s] DEBUG:colcon.colcon_core.verb:Building package 'tutorial_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anmol/autonomous_iit/build/tutorial_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anmol/autonomous_iit/install/tutorial_interfaces', 'merge_install': False, 'path': '/home/anmol/autonomous_iit/src/tutorial_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[1.448s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.448s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anmol/autonomous_iit/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anmol/autonomous_iit/install/px4_ros_com', 'merge_install': False, 'path': '/home/anmol/autonomous_iit/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[1.462s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.476s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.476s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anmol/autonomous_iit/src/px4_msgs' with build type 'ament_cmake'
+[1.476s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anmol/autonomous_iit/src/px4_msgs'
+[1.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.494s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.494s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.538s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/anmol/autonomous_iit/src/autonomous_mode' with build type 'ament_python'
+[1.538s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_mode', 'ament_prefix_path')
+[1.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/ament_prefix_path.ps1'
+[1.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/ament_prefix_path.dsv'
+[1.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/ament_prefix_path.sh'
+[1.570s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.570s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.615s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anmol/autonomous_iit/src/tutorial_interfaces' with build type 'ament_cmake'
+[1.615s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anmol/autonomous_iit/src/tutorial_interfaces'
+[1.628s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.629s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_msgs -- -j12 -l12
+[1.923s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/anmol/autonomous_iit/src/autonomous_mode'
+[1.936s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.937s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.989s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/tutorial_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake /home/anmol/autonomous_iit/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/anmol/autonomous_iit/install/tutorial_interfaces
+[2.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/src/autonomous_mode': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed
+[2.808s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/src/autonomous_mode' returned '0': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed
+[2.827s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode' for CMake module files
+[2.827s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode' for CMake config files
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode/lib'
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode/bin'
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode/lib/pkgconfig/autonomous_mode.pc'
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages'
+[2.828s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_mode', 'pythonpath')
+[2.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/pythonpath.ps1'
+[2.845s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/pythonpath.dsv'
+[2.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/hook/pythonpath.sh'
+[2.846s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/autonomous_mode/bin'
+[2.846s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_mode)
+[2.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/package.ps1'
+[2.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/package.dsv'
+[2.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/package.sh'
+[2.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/package.bash'
+[2.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/package.zsh'
+[2.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/autonomous_mode/share/colcon-core/packages/autonomous_mode)
+[3.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_msgs -- -j12 -l12
+[4.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/tutorial_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake /home/anmol/autonomous_iit/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/anmol/autonomous_iit/install/tutorial_interfaces
+[4.588s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/tutorial_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/tutorial_interfaces -- -j12 -l12
+[8.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/tutorial_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --build /home/anmol/autonomous_iit/build/tutorial_interfaces -- -j12 -l12
+[8.601s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/tutorial_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --install /home/anmol/autonomous_iit/build/tutorial_interfaces
+[8.696s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tutorial_interfaces)
+[8.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/tutorial_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --install /home/anmol/autonomous_iit/build/tutorial_interfaces
+[8.732s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces' for CMake module files
+[8.732s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces' for CMake config files
+[8.733s] Level 1:colcon.colcon_core.shell:create_environment_hook('tutorial_interfaces', 'cmake_prefix_path')
+[8.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.ps1'
+[8.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.dsv'
+[8.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.sh'
+[8.755s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib'
+[8.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('tutorial_interfaces', 'ld_library_path_lib')
+[8.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.ps1'
+[8.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.dsv'
+[8.777s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.sh'
+[8.778s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/bin'
+[8.778s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib/pkgconfig/tutorial_interfaces.pc'
+[8.778s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib/python3.10/site-packages'
+[8.779s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/bin'
+[8.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.ps1'
+[8.797s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.dsv'
+[8.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.sh'
+[8.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.bash'
+[8.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.zsh'
+[8.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/tutorial_interfaces/share/colcon-core/packages/tutorial_interfaces)
+[8.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tutorial_interfaces)
+[8.999s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces' for CMake module files
+[9.000s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces' for CMake config files
+[9.000s] Level 1:colcon.colcon_core.shell:create_environment_hook('tutorial_interfaces', 'cmake_prefix_path')
+[9.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.ps1'
+[9.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.dsv'
+[9.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/cmake_prefix_path.sh'
+[9.025s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib'
+[9.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('tutorial_interfaces', 'ld_library_path_lib')
+[9.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.ps1'
+[9.047s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.dsv'
+[9.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/hook/ld_library_path_lib.sh'
+[9.048s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/bin'
+[9.049s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib/pkgconfig/tutorial_interfaces.pc'
+[9.049s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/lib/python3.10/site-packages'
+[9.049s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/tutorial_interfaces/bin'
+[9.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.ps1'
+[9.072s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.dsv'
+[9.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.sh'
+[9.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.bash'
+[9.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/tutorial_interfaces/share/tutorial_interfaces/package.zsh'
+[9.074s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/tutorial_interfaces/share/colcon-core/packages/tutorial_interfaces)
+[11.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_msgs
+[11.863s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[11.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_msgs
+[11.877s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs' for CMake module files
+[11.878s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs' for CMake config files
+[11.878s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[11.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[11.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[11.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[11.893s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib'
+[11.893s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[11.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[11.907s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[11.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[11.907s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/bin'
+[11.908s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[11.908s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib/python3.10/site-packages'
+[11.908s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/bin'
+[11.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.ps1'
+[11.922s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.dsv'
+[11.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.sh'
+[11.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.bash'
+[11.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.zsh'
+[11.923s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[18.591s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[18.604s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs' for CMake module files
+[18.605s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs' for CMake config files
+[18.605s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[18.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[18.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[18.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[18.619s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib'
+[18.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[18.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[18.633s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[18.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[18.633s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/bin'
+[18.634s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[18.634s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/lib/python3.10/site-packages'
+[18.634s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_msgs/bin'
+[18.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.ps1'
+[18.648s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.dsv'
+[18.648s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.sh'
+[18.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.bash'
+[18.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_msgs/share/px4_msgs/package.zsh'
+[18.649s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[18.650s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anmol/autonomous_iit/src/px4_ros_com' with build type 'ament_cmake'
+[18.650s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anmol/autonomous_iit/src/px4_ros_com'
+[18.664s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[18.664s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[18.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_ros_com -- -j12 -l12
+[18.824s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anmol/autonomous_iit/build/px4_ros_com -- -j12 -l12
+[18.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anmol/autonomous_iit/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_ros_com
+[18.906s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[18.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anmol/autonomous_iit/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anmol/autonomous_iit/install/px4_msgs:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble LD_LIBRARY_PATH=/home/anmol/autonomous_iit/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anmol/autonomous_iit/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anmol/autonomous_iit/build/px4_ros_com
+[18.921s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com' for CMake module files
+[18.921s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com' for CMake config files
+[18.922s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[18.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[18.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[18.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[18.937s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib'
+[18.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[18.950s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[18.951s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[18.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[18.951s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/bin'
+[18.951s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[18.952s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib/python3.10/site-packages'
+[18.952s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/bin'
+[18.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[18.966s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[18.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.sh'
+[18.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.bash'
+[18.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[18.968s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[19.041s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[19.069s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com' for CMake module files
+[19.070s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com' for CMake config files
+[19.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[19.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[19.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[19.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[19.086s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib'
+[19.086s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[19.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[19.101s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[19.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[19.102s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/bin'
+[19.102s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[19.102s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/lib/python3.10/site-packages'
+[19.102s] Level 1:colcon.colcon_core.environment:checking '/home/anmol/autonomous_iit/install/px4_ros_com/bin'
+[19.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[19.117s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[19.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.sh'
+[19.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.bash'
+[19.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/anmol/autonomous_iit/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[19.119s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anmol/autonomous_iit/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[19.119s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[19.120s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[19.120s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[19.120s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[19.141s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[19.141s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[19.141s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[19.170s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[19.193s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anmol/autonomous_iit/install/local_setup.ps1'
+[19.195s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/anmol/autonomous_iit/install/_local_setup_util_ps1.py'
+[19.197s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anmol/autonomous_iit/install/setup.ps1'
+[19.222s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anmol/autonomous_iit/install/local_setup.sh'
+[19.223s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/anmol/autonomous_iit/install/_local_setup_util_sh.py'
+[19.223s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anmol/autonomous_iit/install/setup.sh'
+[19.247s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anmol/autonomous_iit/install/local_setup.bash'
+[19.248s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anmol/autonomous_iit/install/setup.bash'
+[19.271s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anmol/autonomous_iit/install/local_setup.zsh'
+[19.272s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anmol/autonomous_iit/install/setup.zsh'

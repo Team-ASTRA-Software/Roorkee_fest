@@ -1,0 +1,124 @@
+[0.000000] (-) TimerEvent: {}
+[0.000188] (-) JobUnselected: {'identifier': 'autonomous_mode'}
+[0.000220] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000242] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000377] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.000419] (action_commands) JobQueued: {'identifier': 'action_commands', 'dependencies': OrderedDict()}
+[0.000473] (action_commands) JobStarted: {'identifier': 'action_commands'}
+[0.059628] (action_commands) JobProgress: {'identifier': 'action_commands', 'progress': 'cmake'}
+[0.060533] (action_commands) JobProgress: {'identifier': 'action_commands', 'progress': 'build'}
+[0.061315] (action_commands) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/anmol/autonomous_iit/build/action_commands', '--', '-j12', '-l12'], 'cwd': '/home/anmol/autonomous_iit/build/action_commands', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'anmol'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anmol/ws_offboard_control/install/tutorial_interfaces/lib:/home/anmol/ws_offboard_control/install/px4_ros_com/lib:/home/anmol/ws_offboard_control/install/px4_msgs/lib:/home/anmol/ws_offboard_control/install/custom_msgs/lib:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces/lib:/home/anmol/ws_offboard_control/install/action_commands/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anmol'), ('OLDPWD', '/home/anmol'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1906'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anmol/ws_offboard_control/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anmol'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anmol'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/anmol/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/anmol-HP-Pavilion-Laptop-15-eh1xxx:@/tmp/.ICE-unix/1721,unix/anmol-HP-Pavilion-Laptop-15-eh1xxx:/tmp/.ICE-unix/1721'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bdb270ae_7864_4244_a0ca_5300fcacba8a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.544VI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/anmol/ws_offboard_control/install/manual_key_control:/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anmol/autonomous_iit/build/action_commands'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anmol/ws_offboard_control/install/manual_key_control/lib/python3.10/site-packages:/home/anmol/ws_offboard_control/install/tutorial_interfaces/local/lib/python3.10/dist-packages:/home/anmol/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:/home/anmol/ws_offboard_control/install/custom_msgs/local/lib/python3.10/dist-packages:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces/local/lib/python3.10/dist-packages:/home/anmol/ws_offboard_control/install/action_commands/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anmol/ws_offboard_control/install/tutorial_interfaces:/home/anmol/ws_offboard_control/install/px4_ros_com:/home/anmol/ws_offboard_control/install/px4_msgs:/home/anmol/ws_offboard_control/install/custom_msgs:/home/anmol/ws_offboard_control/install/action_tutorials_interfaces:/home/anmol/ws_offboard_control/install/action_commands:/home/anmol/ws_offboard_control/install/manual_key_control:/opt/ros/humble')]), 'shell': False}
+[0.090133] (action_commands) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099177] (-) TimerEvent: {}
+[0.199555] (-) TimerEvent: {}
+[0.224979] (action_commands) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.288165] (action_commands) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.290310] (action_commands) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.292702] (action_commands) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.299665] (-) TimerEvent: {}
+[0.322122] (action_commands) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.399799] (-) TimerEvent: {}
+[0.500162] (-) TimerEvent: {}
+[0.600462] (-) TimerEvent: {}
+[0.608546] (action_commands) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.700618] (-) TimerEvent: {}
+[0.789739] (action_commands) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.800766] (-) TimerEvent: {}
+[0.901197] (-) TimerEvent: {}
+[1.001624] (-) TimerEvent: {}
+[1.028121] (action_commands) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.050156] (action_commands) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.072341] (action_commands) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.072468] (action_commands) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.072526] (action_commands) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.093630] (action_commands) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.094734] (action_commands) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.097613] (action_commands) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.101689] (-) TimerEvent: {}
+[1.130372] (action_commands) StdoutLine: {'line': b'-- Generating done\n'}
+[1.133904] (action_commands) StdoutLine: {'line': b'-- Build files have been written to: /home/anmol/autonomous_iit/build/action_commands\n'}
+[1.164518] (action_commands) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.176134] (action_commands) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.186101] (action_commands) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_action_commands\n'}
+[1.201826] (-) TimerEvent: {}
+[1.302152] (-) TimerEvent: {}
+[1.402501] (-) TimerEvent: {}
+[1.416890] (action_commands) StdoutLine: {'line': b'running egg_info\n'}
+[1.417629] (action_commands) StdoutLine: {'line': b'writing action_commands.egg-info/PKG-INFO\n'}
+[1.417902] (action_commands) StdoutLine: {'line': b'writing dependency_links to action_commands.egg-info/dependency_links.txt\n'}
+[1.418071] (action_commands) StdoutLine: {'line': b'writing top-level names to action_commands.egg-info/top_level.txt\n'}
+[1.419841] (action_commands) StdoutLine: {'line': b"reading manifest file 'action_commands.egg-info/SOURCES.txt'\n"}
+[1.420293] (action_commands) StdoutLine: {'line': b"writing manifest file 'action_commands.egg-info/SOURCES.txt'\n"}
+[1.455896] (action_commands) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_action_commands_egg\n'}
+[1.502950] (-) TimerEvent: {}
+[1.603549] (-) TimerEvent: {}
+[1.704264] (-) TimerEvent: {}
+[1.804811] (-) TimerEvent: {}
+[1.888638] (action_commands) StdoutLine: {'line': b'[  5%] Built target action_commands__cpp\n'}
+[1.898626] (action_commands) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target action_commands__rosidl_generator_c\x1b[0m\n'}
+[1.900921] (action_commands) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.901130] (action_commands) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.901605] (action_commands) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.904939] (-) TimerEvent: {}
+[1.914725] (action_commands) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/action_commands__rosidl_generator_c.dir/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c.o\x1b[0m\n'}
+[1.915004] (action_commands) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/action_commands__rosidl_generator_c.dir/rosidl_generator_c/action_commands/action/detail/command__functions.c.o\x1b[0m\n'}
+[1.932469] (action_commands) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.h:19\x1b[m\x1b[K,\n'}
+[1.932805] (action_commands) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c:4\x1b[m\x1b[K:\n'}
+[1.932946] (action_commands) StderrLine: {'line': b'\x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometry_msgs/msg/detail/geo_pose__struct.h: No such file or directory\n'}
+[1.933058] (action_commands) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"geometry_msgs/msg/detail/geo_pose__struct.h"\x1b[m\x1b[K\n'}
+[1.933165] (action_commands) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.933308] (action_commands) StderrLine: {'line': b'compilation terminated.\n'}
+[1.933734] (action_commands) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/action_commands__rosidl_generator_c.dir/build.make:142: CMakeFiles/action_commands__rosidl_generator_c.dir/rosidl_generator_c/action_commands/action/detail/follow_gps_waypoints__functions.c.o] Error 1\n'}
+[1.933843] (action_commands) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.005069] (-) TimerEvent: {}
+[2.025036] (action_commands) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/action_commands__rosidl_generator_c.dir/all] Error 2\n'}
+[2.025312] (action_commands) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[2.105192] (-) TimerEvent: {}
+[2.205586] (-) TimerEvent: {}
+[2.305930] (-) TimerEvent: {}
+[2.406287] (-) TimerEvent: {}
+[2.408204] (action_commands) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.425720] (action_commands) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/action_commands/action/command__type_support.cpp.o\x1b[0m\n'}
+[2.426013] (action_commands) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp.o\x1b[0m\n'}
+[2.479507] (action_commands) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.486338] (action_commands) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp:7\x1b[m\x1b[K:\n'}
+[2.486558] (action_commands) StderrLine: {'line': b'\x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometry_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory\n'}
+[2.486684] (action_commands) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometry_msgs/msg/detail/geo_pose__struct.hpp"\x1b[m\x1b[K\n'}
+[2.486796] (action_commands) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.486906] (action_commands) StderrLine: {'line': b'compilation terminated.\n'}
+[2.488663] (action_commands) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/build.make:111: CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/action_commands/action/follow_gps_waypoints__type_support.cpp.o] Error 1\n'}
+[2.489101] (action_commands) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.496126] (action_commands) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp.o\x1b[0m\n'}
+[2.496299] (action_commands) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/action_commands/action/detail/command__type_support.cpp.o\x1b[0m\n'}
+[2.506389] (-) TimerEvent: {}
+[2.555643] (action_commands) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target action_commands__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.561819] (action_commands) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp:12\x1b[m\x1b[K:\n'}
+[2.562070] (action_commands) StderrLine: {'line': b'\x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometry_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory\n'}
+[2.562174] (action_commands) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometry_msgs/msg/detail/geo_pose__struct.hpp"\x1b[m\x1b[K\n'}
+[2.562262] (action_commands) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.562346] (action_commands) StderrLine: {'line': b'compilation terminated.\n'}
+[2.564107] (action_commands) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/build.make:119: CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/action_commands/action/detail/follow_gps_waypoints__type_support.cpp.o] Error 1\n'}
+[2.564349] (action_commands) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.573861] (action_commands) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp.o\x1b[0m\n'}
+[2.574262] (action_commands) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/command__type_support.cpp.o\x1b[0m\n'}
+[2.606533] (-) TimerEvent: {}
+[2.635765] (action_commands) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/follow_gps_waypoints__rosidl_typesupport_fastrtps_cpp.hpp:11\x1b[m\x1b[K,\n'}
+[2.636029] (action_commands) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp:4\x1b[m\x1b[K:\n'}
+[2.636128] (action_commands) StderrLine: {'line': b'\x1b[01m\x1b[K/home/anmol/autonomous_iit/build/action_commands/rosidl_generator_cpp/action_commands/action/detail/follow_gps_waypoints__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometry_msgs/msg/detail/geo_pose__struct.hpp: No such file or directory\n'}
+[2.636215] (action_commands) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometry_msgs/msg/detail/geo_pose__struct.hpp"\x1b[m\x1b[K\n'}
+[2.636302] (action_commands) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.636388] (action_commands) StderrLine: {'line': b'compilation terminated.\n'}
+[2.638211] (action_commands) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/build.make:119: CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/action_commands/action/detail/dds_fastrtps/follow_gps_waypoints__type_support.cpp.o] Error 1\n'}
+[2.638485] (action_commands) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.706660] (-) TimerEvent: {}
+[2.807024] (-) TimerEvent: {}
+[2.816459] (action_commands) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/action_commands__rosidl_typesupport_cpp.dir/all] Error 2\n'}
+[2.907173] (-) TimerEvent: {}
+[2.966708] (action_commands) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/action_commands__rosidl_typesupport_introspection_cpp.dir/all] Error 2\n'}
+[3.007317] (-) TimerEvent: {}
+[3.045346] (action_commands) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/action_commands__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2\n'}
+[3.045604] (action_commands) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.048611] (action_commands) CommandEnded: {'returncode': 2}
+[3.107404] (-) TimerEvent: {}
+[3.203359] (action_commands) JobEnded: {'identifier': 'action_commands', 'rc': 2}
+[3.204356] (-) EventReactorShutdown: {}
