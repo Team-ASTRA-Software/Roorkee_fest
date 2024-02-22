@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from px4_msgs.msg import VehicleGlobalPosition,VehicleImu
+from px4_msgs.msg import VehicleGlobalPosition,VehicleImu,SensorGps
 import yaml
 import os
 import sys
@@ -33,12 +33,12 @@ class GpsGuiLogger(tk.Tk,Node):
         self.gps_pose_textbox.pack()
         self.key_board_subscriber=self.create_subscription(Board,'/keyboard',self.key_callback,qos_profile)
         self.gps_subscription = self.create_subscription(
-            VehicleGlobalPosition,
+            SensorGps,
             '/fmu/out/vehicle_global_position',
             self.gps_callback,
             qos_profile
         )
-        self.last_gps_position = VehicleGlobalPosition()
+        self.last_gps_position = SensorGps()
         self.timer_logging=self.create_timer(0.1,self.log_waypoint)
         # self.imu_subscription = self.create_subscription(
         #     Imu,
@@ -51,7 +51,7 @@ class GpsGuiLogger(tk.Tk,Node):
         self.key_values=msg
 
 
-    def gps_callback(self, msg: VehicleGlobalPosition):
+    def gps_callback(self, msg: SensorGps):
         """
         Callback to store the last GPS pose
         """

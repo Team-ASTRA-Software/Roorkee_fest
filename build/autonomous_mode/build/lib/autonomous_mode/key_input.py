@@ -178,7 +178,7 @@ class keyboard_publisher(Node):
             key_values.x=key_state['x']
             key_values.j=key_state['j']
             self.key_pub.publish(key_values)
-            time.sleep(0.05)
+            time.sleep(0.5)
 
 
 

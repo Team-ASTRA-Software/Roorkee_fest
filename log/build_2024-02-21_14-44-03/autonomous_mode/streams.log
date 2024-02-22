@@ -1,0 +1,52 @@
+[1.085s] Invoking command in '/home/anmol/autonomous_iit/src/autonomous_mode': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed
+[1.445s] running egg_info
+[1.445s] writing ../../build/autonomous_mode/autonomous_mode.egg-info/PKG-INFO
+[1.446s] writing dependency_links to ../../build/autonomous_mode/autonomous_mode.egg-info/dependency_links.txt
+[1.446s] writing entry points to ../../build/autonomous_mode/autonomous_mode.egg-info/entry_points.txt
+[1.446s] writing requirements to ../../build/autonomous_mode/autonomous_mode.egg-info/requires.txt
+[1.446s] writing top-level names to ../../build/autonomous_mode/autonomous_mode.egg-info/top_level.txt
+[1.449s] reading manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+[1.451s] writing manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+[1.451s] running build
+[1.451s] running build_py
+[1.451s] copying autonomous_mode/key_input.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.452s] copying autonomous_mode/gps_logger.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.452s] copying autonomous_mode/__init__.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.452s] copying autonomous_mode/follow_gps_logger.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.452s] copying autonomous_mode/get_drone_data.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.452s] copying autonomous_mode/utilities.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.453s] copying autonomous_mode/gps_logger_switch.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[1.453s] running install
+[1.454s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.454s]   warnings.warn(
+[1.454s] running install_lib
+[1.455s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/key_input.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.455s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/gps_logger.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.455s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/__init__.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.455s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/follow_gps_logger.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.456s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/get_drone_data.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.456s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/utilities.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.456s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/gps_logger_switch.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[1.457s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/key_input.py to key_input.cpython-310.pyc
+[1.459s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/gps_logger.py to gps_logger.cpython-310.pyc
+[1.460s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__init__.py to __init__.cpython-310.pyc
+[1.460s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/follow_gps_logger.py to follow_gps_logger.cpython-310.pyc
+[1.461s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/get_drone_data.py to get_drone_data.cpython-310.pyc
+[1.461s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/utilities.py to utilities.cpython-310.pyc
+[1.462s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/gps_logger_switch.py to gps_logger_switch.cpython-310.pyc
+[1.464s] running install_data
+[1.465s] copying resource/autonomous_mode -> /home/anmol/autonomous_iit/install/autonomous_mode/share/ament_index/resource_index/packages
+[1.465s] copying package.xml -> /home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode
+[1.465s] creating /home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/launch
+[1.465s] copying launch/kalman_filter.launch.py -> /home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/launch
+[1.465s] creating /home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/config
+[1.465s] copying config/dual_ekf_params.yaml -> /home/anmol/autonomous_iit/install/autonomous_mode/share/autonomous_mode/config
+[1.465s] running install_egg_info
+[1.467s] removing '/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info' (and everything under it)
+[1.468s] Copying ../../build/autonomous_mode/autonomous_mode.egg-info to /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info
+[1.469s] running install_scripts
+[1.497s] Installing gps_logger script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.497s] Installing gps_logger_switch script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.497s] Installing key_input script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.497s] writing list of installed files to '/home/anmol/autonomous_iit/build/autonomous_mode/install.log'
+[1.539s] Invoked command in '/home/anmol/autonomous_iit/src/autonomous_mode' returned '0': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed
