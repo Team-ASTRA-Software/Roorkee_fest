@@ -9,12 +9,16 @@ setup.py
 ../../build/autonomous_mode/autonomous_mode.egg-info/top_level.txt
 ../../build/autonomous_mode/autonomous_mode.egg-info/zip-safe
 autonomous_mode/__init__.py
+autonomous_mode/autonomous.py
 autonomous_mode/follow_gps_logger.py
 autonomous_mode/get_drone_data.py
+autonomous_mode/get_msgs.py
 autonomous_mode/gps_logger.py
 autonomous_mode/gps_logger_switch.py
 autonomous_mode/key_input.py
+autonomous_mode/testing.py
 autonomous_mode/utilities.py
+autonomous_mode/utm_conversion.py
 config/dual_ekf_params.yaml
 launch/kalman_filter.launch.py
 resource/autonomous_mode

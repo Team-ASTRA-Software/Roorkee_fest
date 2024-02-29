@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from px4_msgs.msg import VehicleGlobalPosition,VehicleImu
+from px4_msgs.msg import VehicleGlobalPosition,VehicleImu,SensorGps
 import yaml
 import os
 import sys
@@ -8,6 +8,33 @@ import tkinter as tk
 from tkinter import messagebox
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from tutorial_interfaces.msg import Board
+import RPi.GPIO as GPIO
+import time
+
+class LEDBlinkerNode(Node):
+    def __init__(self):
+        super().__init__('led_blinker')
+        self.gps_pin = 17
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.gps_pin, GPIO.IN)
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+    def timer_callback(self):
+        GPIO.output(self.led_pin, GPIO.HIGH)
+        time.sleep(1) 
+        GPIO.output(self.led_pin, GPIO.LOW)
+        time.sleep(1) 
+
+def main(args=None):
+    rclpy.init(args=args)
+    led_blinker_node = LEDBlinkerNode()
+    rclpy.spin(led_blinker_node)
+
+    GPIO.cleanup()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
 
 
 class GpsGuiLogger(tk.Tk,Node):
@@ -33,12 +60,12 @@ class GpsGuiLogger(tk.Tk,Node):
         self.gps_pose_textbox.pack()
         self.key_board_subscriber=self.create_subscription(Board,'/keyboard',self.key_callback,qos_profile)
         self.gps_subscription = self.create_subscription(
-            VehicleGlobalPosition,
+            SensorGps,
             '/fmu/out/vehicle_global_position',
             self.gps_callback,
             qos_profile
         )
-        self.last_gps_position = VehicleGlobalPosition()
+        self.last_gps_position = SensorGps()
         self.timer_logging=self.create_timer(0.1,self.log_waypoint)
         # self.imu_subscription = self.create_subscription(
         #     Imu,
@@ -51,7 +78,7 @@ class GpsGuiLogger(tk.Tk,Node):
         self.key_values=msg
 
 
-    def gps_callback(self, msg: VehicleGlobalPosition):
+    def gps_callback(self, msg: SensorGps):
         """
         Callback to store the last GPS pose
         """

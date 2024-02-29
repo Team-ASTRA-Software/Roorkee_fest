@@ -52,3 +52,9 @@ def latLonYaw2Geopose(latitude: float, longitude: float, yaw: float = 0.0) -> Ge
     geopose.position.longitude = longitude
     geopose.orientation = quaternion_from_euler(0.0, 0.0, yaw)
     return geopose
+
+def degrees_to_radians(angle_degrees):
+    angle_radians = math.radians(angle_degrees)
+    # Ensure the result is in the range from -π to π
+    angle_radians = (angle_radians + math.pi) % (2*math.pi) - math.pi
+    return angle_radians

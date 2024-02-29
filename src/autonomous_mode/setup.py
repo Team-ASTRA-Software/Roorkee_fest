@@ -25,7 +25,13 @@ setup(
         'console_scripts': [
             'gps_logger=autonomous_mode.gps_logger:main',
             'key_input=autonomous_mode.key_input:main',
-            'gps_logger_switch=autonomous_mode.gps_logger_switch:main'
+            'gps_logger_switch=autonomous_mode.gps_logger_switch:main',
+            'follow_gps=autonomous_mode.follow_gps_logger:main',
+            'transfoem=autonomous_mode.transform:main',
+            'get_msgs=autonomous_mode.get_msgs:main',
+            'autonomous_mode=autonomous_mode.autonomous:main',
+            'utilities=autonomous_mode.utilities:main',
+            'testing=autonomous_mode.testing:main',
         ],
     },
 )

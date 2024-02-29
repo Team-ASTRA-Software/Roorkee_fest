@@ -1,0 +1,34 @@
+[0.762s] Invoking command in '/home/anmol/autonomous_iit/src/autonomous_mode': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed
+[0.971s] running egg_info
+[0.972s] writing ../../build/autonomous_mode/autonomous_mode.egg-info/PKG-INFO
+[0.972s] writing dependency_links to ../../build/autonomous_mode/autonomous_mode.egg-info/dependency_links.txt
+[0.972s] writing entry points to ../../build/autonomous_mode/autonomous_mode.egg-info/entry_points.txt
+[0.972s] writing requirements to ../../build/autonomous_mode/autonomous_mode.egg-info/requires.txt
+[0.972s] writing top-level names to ../../build/autonomous_mode/autonomous_mode.egg-info/top_level.txt
+[0.974s] reading manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+[0.983s] writing manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+[0.983s] running build
+[0.983s] running build_py
+[0.983s] copying autonomous_mode/autonomous.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+[0.984s] running install
+[0.985s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.985s]   warnings.warn(
+[0.985s] running install_lib
+[0.986s] copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/autonomous.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+[0.987s] byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/autonomous.py to autonomous.cpython-310.pyc
+[0.989s] running install_data
+[0.989s] running install_egg_info
+[0.991s] removing '/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info' (and everything under it)
+[0.992s] Copying ../../build/autonomous_mode/autonomous_mode.egg-info to /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info
+[0.993s] running install_scripts
+[1.010s] Installing autonomous_mode script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing follow_gps script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing get_msgs script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing gps_logger script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing gps_logger_switch script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing key_input script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing testing script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing transfoem script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] Installing utilities script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.011s] writing list of installed files to '/home/anmol/autonomous_iit/build/autonomous_mode/install.log'
+[1.040s] Invoked command in '/home/anmol/autonomous_iit/src/autonomous_mode' returned '0': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/autonomous_mode build --build-base /home/anmol/autonomous_iit/build/autonomous_mode/build install --record /home/anmol/autonomous_iit/build/autonomous_mode/install.log --single-version-externally-managed

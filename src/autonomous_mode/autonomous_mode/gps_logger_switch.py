@@ -8,6 +8,33 @@ import tkinter as tk
 from tkinter import messagebox
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from tutorial_interfaces.msg import Board
+import RPi.GPIO as GPIO
+import time
+
+class LEDBlinkerNode(Node):
+    def __init__(self):
+        super().__init__('led_blinker')
+        self.gps_pin = 17
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.gps_pin, GPIO.IN)
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+    def timer_callback(self):
+        GPIO.output(self.led_pin, GPIO.HIGH)
+        time.sleep(1) 
+        GPIO.output(self.led_pin, GPIO.LOW)
+        time.sleep(1) 
+
+def main(args=None):
+    rclpy.init(args=args)
+    led_blinker_node = LEDBlinkerNode()
+    rclpy.spin(led_blinker_node)
+
+    GPIO.cleanup()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
 
 
 class GpsGuiLogger(tk.Tk,Node):

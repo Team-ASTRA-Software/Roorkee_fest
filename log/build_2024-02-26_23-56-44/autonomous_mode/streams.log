@@ -1,0 +1,28 @@
+[1.130s] Invoking command in '/home/anmol/autonomous_iit/build/autonomous_mode': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/anmol/autonomous_iit/build/autonomous_mode/build --no-deps install_data
+[1.495s] running develop
+[1.506s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.506s]   warnings.warn(
+[1.508s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.509s]   warnings.warn(
+[1.735s] running egg_info
+[1.735s] writing autonomous_mode.egg-info/PKG-INFO
+[1.736s] writing dependency_links to autonomous_mode.egg-info/dependency_links.txt
+[1.736s] writing entry points to autonomous_mode.egg-info/entry_points.txt
+[1.737s] writing requirements to autonomous_mode.egg-info/requires.txt
+[1.737s] writing top-level names to autonomous_mode.egg-info/top_level.txt
+[1.741s] reading manifest file 'autonomous_mode.egg-info/SOURCES.txt'
+[1.742s] writing manifest file 'autonomous_mode.egg-info/SOURCES.txt'
+[1.744s] running build_ext
+[1.745s] Creating /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous-mode.egg-link (link to .)
+[1.746s] Installing autonomous_mode script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.746s] Installing follow_gps script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.746s] Installing get_msgs script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.746s] Installing gps_logger script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.747s] Installing gps_logger_switch script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.747s] Installing key_input script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.747s] Installing transfoem script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.747s] Installing utilities script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+[1.747s] 
+[1.747s] Installed /home/anmol/autonomous_iit/build/autonomous_mode
+[1.747s] running install_data
+[1.798s] Invoked command in '/home/anmol/autonomous_iit/build/autonomous_mode' returned '0': PYTHONPATH=/home/anmol/autonomous_iit/build/autonomous_mode/prefix_override:/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/anmol/autonomous_iit/build/autonomous_mode/build --no-deps install_data

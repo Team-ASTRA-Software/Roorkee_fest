@@ -1,0 +1,29 @@
+running egg_info
+writing ../../build/autonomous_mode/autonomous_mode.egg-info/PKG-INFO
+writing dependency_links to ../../build/autonomous_mode/autonomous_mode.egg-info/dependency_links.txt
+writing entry points to ../../build/autonomous_mode/autonomous_mode.egg-info/entry_points.txt
+writing requirements to ../../build/autonomous_mode/autonomous_mode.egg-info/requires.txt
+writing top-level names to ../../build/autonomous_mode/autonomous_mode.egg-info/top_level.txt
+reading manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+writing manifest file '../../build/autonomous_mode/autonomous_mode.egg-info/SOURCES.txt'
+running build
+running build_py
+copying autonomous_mode/get_msgs.py -> /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+copying /home/anmol/autonomous_iit/build/autonomous_mode/build/lib/autonomous_mode/get_msgs.py -> /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode
+byte-compiling /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/get_msgs.py to get_msgs.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/autonomous_mode/autonomous_mode.egg-info to /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode-0.0.0-py3.10.egg-info
+running install_scripts
+Installing follow_gps script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing get_msgs script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing gps_logger script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing gps_logger_switch script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing key_input script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing transfoem script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+writing list of installed files to '/home/anmol/autonomous_iit/build/autonomous_mode/install.log'

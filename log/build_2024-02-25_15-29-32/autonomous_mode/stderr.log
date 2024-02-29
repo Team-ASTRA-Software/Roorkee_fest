@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+  File "/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/get_msgs.py", line 57
+    self.vehicle_imu.
+                     ^
+SyntaxError: invalid syntax
+

@@ -1,5 +1,11 @@
 [console_scripts]
+autonomous_mode = autonomous_mode.autonomous:main
+follow_gps = autonomous_mode.follow_gps_logger:main
+get_msgs = autonomous_mode.get_msgs:main
 gps_logger = autonomous_mode.gps_logger:main
 gps_logger_switch = autonomous_mode.gps_logger_switch:main
 key_input = autonomous_mode.key_input:main
+testing = autonomous_mode.testing:main
+transfoem = autonomous_mode.transform:main
+utilities = autonomous_mode.utilities:main
 

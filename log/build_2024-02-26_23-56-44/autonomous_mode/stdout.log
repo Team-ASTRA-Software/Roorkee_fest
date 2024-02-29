@@ -1,0 +1,22 @@
+running develop
+running egg_info
+writing autonomous_mode.egg-info/PKG-INFO
+writing dependency_links to autonomous_mode.egg-info/dependency_links.txt
+writing entry points to autonomous_mode.egg-info/entry_points.txt
+writing requirements to autonomous_mode.egg-info/requires.txt
+writing top-level names to autonomous_mode.egg-info/top_level.txt
+reading manifest file 'autonomous_mode.egg-info/SOURCES.txt'
+writing manifest file 'autonomous_mode.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous-mode.egg-link (link to .)
+Installing autonomous_mode script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing follow_gps script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing get_msgs script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing gps_logger script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing gps_logger_switch script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing key_input script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing transfoem script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+Installing utilities script to /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode
+
+Installed /home/anmol/autonomous_iit/build/autonomous_mode
+running install_data
