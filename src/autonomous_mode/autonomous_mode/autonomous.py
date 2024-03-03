@@ -6,6 +6,8 @@ import math,utm
 # from utilities import degrees_to_radians,euler_from_quaternion
 from geometry_msgs.msg import Quaternion
 from rclpy.time import Time,Duration
+from rclpy.executors import MultiThreadedExecutor
+import time
 waypoints=[(47.39779806134497,  8.545671128868838),(47.39779371134151,8.545604635710545)]
 
 
@@ -223,8 +225,14 @@ class OffboardControl(Node):
         timeout = Duration(seconds=5.0)  # Timeout of 2 seconds
 
         while self.get_clock().now() - start_time < timeout:
-            self.publish_position_setpoint(target_pos_x,target_pos_y,self.takeoff_height)
+            self.publish_position_setpoint(target_pos_x,target_pos_y,self.takeoff_height,yaw_angle=self.drone_angle)
 
+        # start_time = self.get_clock().now()
+        # timeout = Duration(seconds=5.0) 
+
+        # while self.get_clock().now() - start_time < timeout:
+        #     self.publish_position_setpoint(self.vehicle_local_position.x,self.vehicle_local_position.y,self.takeoff_height,1.57)
+            
             # do your stuff
 
 
@@ -289,14 +297,14 @@ class OffboardControl(Node):
         
 
 
-    def publish_position_setpoint(self, x: float, y: float, z: float):
+    def publish_position_setpoint(self, x: float, y: float, z: float,yaw_angle:float):
         """Publish the trajectory setpoint."""
         msg = TrajectorySetpoint()
         msg.position = [x, y, z]
         # msg.velocity=[0.1,0.0,0.0]
-        # msg.yaw=yaw_angle
-        # msg.yawspeed=0.1
-        msg.yaw=1.57
+        msg.yaw=yaw_angle
+        msg.yawspeed=0.1
+
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
         self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
@@ -340,11 +348,11 @@ class OffboardControl(Node):
             self.arm()
 
         if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-            self.publish_position_setpoint(self.vehicle_local_position.x, self.vehicle_local_position.y, self.takeoff_height-0.5)
+            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height-0.5,1.57)
 
         elif self.vehicle_local_position.z <= self.takeoff_height:
-            lat=47.3977507
-            lon=8.546070
+            lat=47.39779371134151
+            lon=8.545604635710545
             distance,angle=self.convert_utm(lat,lon)
             # print(distance,angle)
             # waypoints=[(47.39779806134497,8.545671128868838),(47.39779371134151, 8.545604635710545)]
@@ -354,7 +362,7 @@ class OffboardControl(Node):
             if(self.navigate_to_point(lat,lon,distance,angle)):
                 self.get_logger().info('Finished reaching')
                 self.land()
-                exit(0)
+
 
 
 
@@ -362,12 +370,20 @@ class OffboardControl(Node):
             self.offboard_setpoint_counter += 1
 
 
+# class navigating_point(Node):
+#     def __init__(self) -> None:
+#         super().__init__('navigation task')
+
+
+
+
+
 def main(args=None) -> None:
     print('Starting offboard control node...')
     rclpy.init(args=args)
     offboard_control = OffboardControl()    
     rclpy.spin(offboard_control)
-    offboard_control.destroy_node()
+    # offboard_control.destroy_node()
     rclpy.shutdown()
 
 

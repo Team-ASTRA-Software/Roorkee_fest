@@ -155,12 +155,12 @@ class keyboard_publisher(Node):
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
             history=HistoryPolicy.KEEP_ALL,
         )
-        print('chut')
         self.key_pub=self.create_publisher(Board,'/keyboard',qos_profile)
         threading.Thread(target=self.publisher_callback).start()
 
     def publisher_callback(self):
         while True:
+            print("d")
             key_values.key_up=key_state["key_up"]
             key_values.key_down=key_state["key_down"]
             key_values.key_left=key_state["key_left"]
@@ -203,7 +203,7 @@ def main(args=None) -> None:
             executor.spin()
         finally:
             executor.shutdown()
-            # key_publisher.destroy_node()
+            key_publisher.destroy_node()
             key_reader.destroy_node()
 
     finally:
