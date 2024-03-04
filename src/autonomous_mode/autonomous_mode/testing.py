@@ -4,10 +4,11 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPo
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus,VehicleAttitudeSetpoint,VehicleAttitude,SensorGps
 from geometry_msgs.msg import Quaternion
 import math
-from rclpy.executors import MultiThreadedExecutor,SingleThreadedExecutor
+from rclpy.executors import MultiThreadedExecutor
 import threading
-import time
+from rclpy.time import Time,Duration
 import math,utm
+import time
 
 class SharedVariables:
     def __init__(self):
@@ -183,12 +184,15 @@ class navigating_point(Node):
         self.take_off_h=-5.0
         self.takeoff_done=False
         self.reached=False
-        self.timer = self.create_timer(0.3, self.timer_callback_2)
+        self.timer = self.create_timer(0.1, self.timer_callback_2)
         self.get_data=False
         self.yaw=False
         self.target_pos_x_ned=self.shared_variables.vehicle_local_pos.x
         self.target_pos_y_ned=self.shared_variables.vehicle_local_pos.y
-        self.x_ned=0.0
+        self.target_angle=self.drone_curr_angle
+        self.target_wp=[ (47.39779806134497, 8.545671128868838),( 47.39779371134151, 8.545604635710545)]
+        self.present_wp=0
+        self.x_ned=0.0,
         self.y_ned=0.0
         self.z_ned=0.0
         self.yaw_ned=self.drone_curr_angle
@@ -255,11 +259,12 @@ class navigating_point(Node):
 
     def takeoff(self,take_off_h:float):
         current_x=self.shared_variables.vehicle_local_pos.x
-        current_y=self.shared_variables.vehicle_local_pos.x
+        current_y=self.shared_variables.vehicle_local_pos.y
         current_z=self.shared_variables.vehicle_local_pos.z
+        diff_z=abs(abs(current_z)-abs(take_off_h))
         print(current_z)
-        if abs(abs(current_z)-abs(take_off_h))>0.2:
-            self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,self.take_off_h/10,self.drone_curr_angle)
+        if diff_z>0.2:
+            self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,-diff_z,self.drone_curr_angle)
             return False
         else:
             return True
@@ -272,7 +277,6 @@ class navigating_point(Node):
         msg.velocity=[x_vel,y_vel,z_vel]
         msg.yaw=yaw_angle
         msg.yawspeed=-0.2
-        
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         
         
@@ -326,18 +330,30 @@ class navigating_point(Node):
     def navigate_to_point(self,target_pos_x:float,target_pos_y:float):
         current_x=self.shared_variables.vehicle_local_pos.x
         current_y=self.shared_variables.vehicle_local_pos.y
-        print(abs(abs(current_x)-abs(target_pos_x)))
-        print(abs(abs(current_y)-abs(target_pos_y)))
+        diff_x=abs(abs(current_x)-abs(target_pos_x))
+        diff_y=abs(abs(current_y)-abs(target_pos_y))
+        # diff_angle=abs(abs(self.drone_curr_angle)-abs(angle))
         
-        
-        if abs(abs(current_x)-abs(target_pos_x))<=0.2 and abs(abs(current_y)-abs(target_pos_y))<=0.2:
+        if diff_x<=0.2 and diff_y<=0.2:
             return True
+        # elif diff_angle>0.2:
+        #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,0.0,angle)
+        #     return False
+        elif diff_x>0.2:
+            self.publish_pos_vel_setpoint(target_pos_x,current_y,self.take_off_h,0.0,0.0,0.0,self.drone_curr_angle)
+            return False
+        elif diff_y>0.2:
+            self.publish_pos_vel_setpoint(current_x,target_pos_y,self.take_off_h,0.0,0.0,0.0,self.drone_curr_angle)
+            return False
         else:
-            self.publish_pos_vel_setpoint(target_pos_x,target_pos_y,self.take_off_h,0.0,0.0,0.0,self.drone_curr_angle)
             return False
         
         
     def get_conversion_enu_ned(self,x:float,y:float,z:float):
+
+        return y,x,-z
+    
+    def get_conversion_ned_enu(self,x:float,y:float,z:float):
 
         return y,x,-z
     
@@ -347,9 +363,11 @@ class navigating_point(Node):
     
     def get_targets_ned(self,lat:float,lon:float):
         dist_wp,angle_wp=self.convert_utm(lat,lon)
-        target_pos_x_enu=self.shared_variables.vehicle_local_pos.x+dist_wp*math.cos(angle_wp)
-        target_pos_y_enu=self.shared_variables.vehicle_local_pos.x+dist_wp*math.sin(angle_wp)
+        target_pos_x_enu,target_pos_y_enu,_=self.get_conversion_ned_enu(self.shared_variables.vehicle_local_pos.x,self.shared_variables.vehicle_local_pos.y,self.take_off_h)
+        target_pos_x_enu=target_pos_x_enu+dist_wp*math.cos(angle_wp)
+        target_pos_y_enu=target_pos_y_enu+dist_wp*math.sin(angle_wp)
         target_pos_x_ned,target_pos_y_ned,_=self.get_conversion_enu_ned(target_pos_x_enu,target_pos_y_enu,self.take_off_h)
+        angle_wp=self.get_yaw_angle(angle_wp)
         return target_pos_x_ned,target_pos_y_ned
         
 
@@ -364,14 +382,16 @@ class navigating_point(Node):
             
 
             self.takeoff_done=self.takeoff(self.take_off_h)
-            
+            if self.takeoff_done:
+                time.sleep(5.0)
+            print(self.takeoff_done)
             
 
         elif self.shared_variables.vehicle_local_pos.z <= self.take_off_h and self.reached==False and self.shared_variables.vehicle_status_.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
             
             if not self.get_data:
                 
-                self.target_pos_x_ned,self.target_pos_y_ned=self.get_targets_ned(47.39779806134497, 8.545671128868838)
+                self.target_pos_x_ned,self.target_pos_y_ned=self.get_targets_ned(self.target_wp[self.present_wp][0], self.target_wp[self.present_wp][1])
                 self.get_data=True
 
 
@@ -379,13 +399,37 @@ class navigating_point(Node):
                 print(f"{self.target_pos_x_ned},{self.target_pos_y_ned}")
                 self.reached=self.navigate_to_point(self.target_pos_x_ned,self.target_pos_y_ned)
                 print(self.reached)
+
+            
+                
             
         elif self.reached:
+            time.sleep(5.0)
+            
+            self.present_wp+=1
 
-            self.publish_vehicle_command(23)
+            if self.present_wp==len(self.target_wp):
+                self.publish_vehicle_command(23)
+                
+            self.get_data=False
+            self.reached=False
+            
+
+        
+
+          
             
         
         
+# # - alt: 493.1202087402344
+# #   latitude: 47.39774927675293
+# #   longitude: 8.545609936196678
+# # - alt: 493.11126708984375
+# #   latitude: 47.39779371134151
+# #   longitude: 8.545604635710545
+# # - alt: 493.1399230957031
+# #   latitude: 47.39779806134497
+# #   longitude: 8.545671128868838
                 
             
             
