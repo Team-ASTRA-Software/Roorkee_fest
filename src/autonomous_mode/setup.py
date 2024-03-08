@@ -32,6 +32,7 @@ setup(
             'autonomous_mode=autonomous_mode.autonomous:main',
             'utilities=autonomous_mode.utilities:main',
             'testing=autonomous_mode.testing:main',
+            'real_testing=autonomous_mode.real_time_testing:main',
         ],
     },
 )

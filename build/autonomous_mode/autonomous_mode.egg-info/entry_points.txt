@@ -5,6 +5,7 @@ get_msgs = autonomous_mode.get_msgs:main
 gps_logger = autonomous_mode.gps_logger:main
 gps_logger_switch = autonomous_mode.gps_logger_switch:main
 key_input = autonomous_mode.key_input:main
+real_testing = autonomous_mode.real_time_testing:main
 testing = autonomous_mode.testing:main
 transfoem = autonomous_mode.transform:main
 utilities = autonomous_mode.utilities:main

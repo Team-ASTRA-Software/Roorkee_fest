@@ -16,6 +16,7 @@ autonomous_mode/get_msgs.py
 autonomous_mode/gps_logger.py
 autonomous_mode/gps_logger_switch.py
 autonomous_mode/key_input.py
+autonomous_mode/real_time_testing.py
 autonomous_mode/testing.py
 autonomous_mode/utilities.py
 autonomous_mode/utm_conversion.py

@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+  File "/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/real_time_testing.py", line 429
+    self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_TAKEOFF,param5=self.shared_variables.vehicle_gps_pos.latitude_deg,param5=self.shared_variables.vehicle_gps_pos.longitude_deg,param7=self.take_off_h)
+                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: param5
+

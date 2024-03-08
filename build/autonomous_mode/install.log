@@ -6,6 +6,7 @@
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/follow_gps_logger.py
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/testing.py
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/get_drone_data.py
+/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/real_time_testing.py
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/utilities.py
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/utm_conversion.py
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/gps_logger_switch.py
@@ -17,6 +18,7 @@
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/follow_gps_logger.cpython-310.pyc
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/testing.cpython-310.pyc
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/get_drone_data.cpython-310.pyc
+/home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/real_time_testing.cpython-310.pyc
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/utilities.cpython-310.pyc
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/utm_conversion.cpython-310.pyc
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/python3.10/site-packages/autonomous_mode/__pycache__/gps_logger_switch.cpython-310.pyc
@@ -37,6 +39,7 @@
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/gps_logger
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/gps_logger_switch
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/key_input
+/home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/real_testing
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/testing
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/transfoem
 /home/anmol/autonomous_iit/install/autonomous_mode/lib/autonomous_mode/utilities
