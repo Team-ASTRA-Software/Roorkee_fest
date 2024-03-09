@@ -204,8 +204,9 @@ class navigating_point(Node):
         self.yaw=False
         self.target_pos_x_ned=self.shared_variables.vehicle_local_pos.x
         self.target_pos_y_ned=self.shared_variables.vehicle_local_pos.y
+        self.yaw_first=False
         self.target_angle=self.drone_curr_angle
-        self.target_wp=[ (12.8369923,80.1369481),(12.8367105,80.1370183)]
+        self.target_wp=[ ( 47.39774927675293, 8.545609936196678)]
         # self.target_wp=[(12.8374937, 80.1374365),[12.8370584, 80.1372932]]
         self.target_angle=self.drone_curr_angle
         self.present_wp=0
@@ -283,6 +284,7 @@ class navigating_point(Node):
         current_x=self.shared_variables.vehicle_local_pos.x
         current_y=self.shared_variables.vehicle_local_pos.y
         current_z=self.shared_variables.vehicle_local_pos.z
+
         
         if take_off_h>current_z:
             diff_z=abs(take_off_h-current_z)
@@ -303,7 +305,11 @@ class navigating_point(Node):
         msg.position = [x, y, z]
         msg.velocity=[x_vel,y_vel,z_vel]
         msg.yaw=yaw_angle
-        msg.yawspeed=0.1
+
+        # if yaw_angle>0:
+        #     msg.yawspeed=-0.5
+        # else:
+        #     msg.yawspeed=+0.5
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         
         
@@ -357,9 +363,11 @@ class navigating_point(Node):
         msg.roll_body=0.0
         msg.pitch_body=0.0
         msg.yaw_body=yaw_angle
-        msg.yaw_sp_move_rate=0.05
-        while abs(abs(self.drone_curr_angle)-abs(yaw_angle))<0.2:
-            self.vehicle_attitude_publisher.publish(msg)
+        msg.yaw_sp_move_rate=1.0
+        
+        self.vehicle_attitude_publisher.publish(msg)
+
+
 
     def get_drone_angle(self):
         quat=Quaternion()
@@ -385,13 +393,14 @@ class navigating_point(Node):
         current_z=self.shared_variables.vehicle_local_pos.z
         current_vel_x=self.shared_variables.vehicle_local_pos.vx
         current_vel_y=self.shared_variables.vehicle_local_pos.vy
-        
+        if target_angle>3.14:
+            target_angle=abs(3.14-target_angle)-3.14
         x_vel=0.0
         y_vel=0.0
-        # if target_angle>current_angle:
-        #     diff_angle=abs(target_angle-current_angle)
-        # else:
-        #     diff_angle=abs(current_angle-target_angle)
+        if target_angle>current_angle:
+            diff_angle=abs(target_angle-current_angle)
+        else:
+            diff_angle=abs(current_angle-target_angle)
         
 
         if target_pos_x>current_x:
@@ -403,22 +412,32 @@ class navigating_point(Node):
             diff_y=abs(target_pos_y-current_y)
         else:
             diff_y=abs(current_y-target_pos_y)
-        print(diff_x)
-        print(diff_y)
-        print(target_pos_x)
-        print(target_pos_y)
+        # print(diff_x)
+        # print(diff_y)
+        # print(target_pos_x)
+        # print(target_pos_y)
         
         # print(f"{target_pos_x},{target_pos_y}")
         # print(f"{diff_x,diff_y}")
-        # print(f"{diff_angle}")
-        # print(f"{target_angle}")
-        # print(f"{current_angle}")
+        print(f"{diff_angle}")
+        print(f"{target_angle}")
+        print(f"{current_angle}")
 
-        # if diff_angle>0.3:
-        #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,0.0,target_angle)
-        #     return False
+        if diff_angle>0.3 and self.yaw_first==False:
+            self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,0.0,target_angle)
+            self.yaw_first=True
+            return False
+        
+        elif diff_angle<=0.3 and self.yaw_first==False:
+            self.yaw_first=True
+            return False
+        
+        elif self.yaw_first==True and diff_x>0.2 and diff_y>0.2:
+        
+            self.publish_pos_vel_setpoint(target_pos_x,target_pos_y,self.take_off_h,0.0,0.0,0.0,self.drone_curr_angle)
+            return False
 
-        if diff_x<=0.3 and diff_y<=0.3:
+        elif diff_x<=0.2 and diff_y<=0.2 and self.yaw_first==True:
             self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,0.0,0.0,self.drone_curr_angle)
             return True
         
@@ -429,71 +448,74 @@ class navigating_point(Node):
         # elif diff_angle>0.1:
         #     self.publish_pos_vel_setpoint(current_x,current_y,current_z,0.0,0.0,0.0,target_angle)
         #     return False
-        elif diff_x>0.3:
+        # elif diff_x>0.3:
             
-            # if abs(current_vel_x)>=1.0:
-            #     req_vel=1.0
-            #     x_vel=current_vel_x-req_vel
-            #     print(current_vel_x)
-            #     if current_vel_x>0:
-            #         x_vel=-x_vel
+        #     # if abs(current_vel_x)>=1.0:
+        #     #     req_vel=1.0
+        #     #     x_vel=current_vel_x-req_vel
+        #     #     print(current_vel_x)
+        #     #     if current_vel_x>0:
+        #     #         x_vel=-x_vel
             
             
-            
-
-
-            # if diff_x>2.0:
-            #     if current_x>target_pos_x:
-            #         x_vel=-4.0
-            #     else:
-            #         x_vel=4.0
-
-
-            #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,x_vel,0.0,0.0,self.drone_curr_angle)
-
-            velocity_scale_x = max(0.4, diff_x / 10.0) 
-            x_vel = velocity_scale_x * 2.0
-            if current_x>target_pos_x:
-                    x_vel=-x_vel
-            self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,x_vel,0.0,0.0,self.drone_curr_angle)
-
-
-            return False
-        elif diff_y>0.3:
-
-            # if abs(current_vel_y)>=1.0:
-            #     req_vel=1.0
-            #     y_vel=current_vel_y-req_vel
-            #     print(current_vel_y)
-            #     if current_vel_y>0:
-            #         y_vel=-y_vel
-
-
-            # if target_pos_y>current_y:
-            #     y_vel=-y_vel
             
 
-            # if diff_y>2.0:
-            #     if current_y>target_pos_y:
-            #         y_vel=-4.0
-            #     else:
-            #         y_vel=4.0
+
+        #     # if diff_x>2.0:
+        #     #     if current_x>target_pos_x:
+        #     #         x_vel=-4.0
+        #     #     else:
+        #     #         x_vel=4.0
 
 
-            #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,y_vel,0.0,self.drone_curr_angle)
+        #     #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,x_vel,0.0,0.0,self.drone_curr_angle)
 
-                velocity_scale_y = max(0.4, diff_y/ 10) 
-                y_vel = velocity_scale_y * 2.0
-                if current_y>target_pos_y:
-                    y_vel=-y_vel
+        #     velocity_scale_x = max(0.4, diff_x / 10.0) 
+        #     x_vel = velocity_scale_x * 2.0
+        #     if current_x>target_pos_x:
+        #             x_vel=-x_vel
+        #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,x_vel,0.0,0.0,self.drone_curr_angle)
+
+
+        #     return False
+        # elif diff_y>0.3:
+
+        #     # if abs(current_vel_y)>=1.0:
+        #     #     req_vel=1.0
+        #     #     y_vel=current_vel_y-req_vel
+        #     #     print(current_vel_y)
+        #     #     if current_vel_y>0:
+        #     #         y_vel=-y_vel
+
+
+        #     # if target_pos_y>current_y:
+        #     #     y_vel=-y_vel
+            
+
+        #     # if diff_y>2.0:
+        #     #     if current_y>target_pos_y:
+        #     #         y_vel=-4.0
+        #     #     else:
+        #     #         y_vel=4.0
+
+
+        #     #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,y_vel,0.0,self.drone_curr_angle)
+
+        #         velocity_scale_y = max(0.4, diff_y/ 10) 
+        #         y_vel = velocity_scale_y * 2.0
+        #         if current_y>target_pos_y:
+        #             y_vel=-y_vel
                 
 
-                self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,y_vel,0.0,self.drone_curr_angle)
-                return False
+        #         self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,y_vel,0.0,self.drone_curr_angle)
+        #         return False
             
 
+        
+        
         else:
             return False
+
         
         
     def get_conversion_enu_ned(self,x:float,y:float,z:float):
@@ -506,7 +528,7 @@ class navigating_point(Node):
     
     def get_yaw_angle(self,yaw_angle:float):
 
-        return -yaw_angle
+        return 1.57-yaw_angle
     
     def loiter_around(self,time:float):
 
@@ -528,11 +550,8 @@ class navigating_point(Node):
         """Callsback function for the timer."""
         
         self.drone_curr_angle=self.get_drone_angle()
-        print(self.drone_curr_angle)
         current_x=self.shared_variables.vehicle_local_pos.x
         current_y=self.shared_variables.vehicle_local_pos.y
-        current_z=self.shared_variables.vehicle_local_pos.z
-        print(f"{self.drone_curr_angle}")
 
 
         if self.shared_variables.vehicle_status_.nav_state==14 and self.shared_variables.vehicle_status_.arming_state==1 and not self.landed:
@@ -548,6 +567,8 @@ class navigating_point(Node):
             
             self.takeoff_done=self.takeoff(self.take_off_h-0.5)
             if self.takeoff_done:
+                self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,0.0,0.0)
+                
                 time.sleep(2.0)
             print(self.takeoff_done)
                 
@@ -564,6 +585,8 @@ class navigating_point(Node):
 
                 self.reached=self.navigate_to_point(self.target_pos_x_ned,self.target_pos_y_ned,self.target_angle)
                 print(self.reached)
+
+            # self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,0.0,0.0,1.57)
                 
             
         elif self.reached:
@@ -577,6 +600,7 @@ class navigating_point(Node):
             else:
                 self.get_data=False
                 self.reached=False   
+                self.yaw_first=False
 
             
                 

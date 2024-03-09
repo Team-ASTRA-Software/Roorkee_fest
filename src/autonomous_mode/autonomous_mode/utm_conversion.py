@@ -72,18 +72,21 @@ def calculate_distance_and_angle(utm1, utm2):
     return distance, angle
 
 # Example UTM coordinates (replace with your values)
-utm_coordinate1 = utm.from_latlon( 12.8369923,80.1369481
+utm_coordinate1 = utm.from_latlon( 
+
+47.3978483,8.545679699999999
+
 
 
 
  )
-utm_coordinate2 = utm.from_latlon(12.8367105,80.1370183
+utm_coordinate2 = utm.from_latlon(47.3977615,8.5456023
  )
 
 distance, angle = calculate_distance_and_angle(utm_coordinate1, utm_coordinate2)
 
 print(f"Distance: {distance:.2f} meters")
-print(f"Angle: {math.degrees(angle):.2f} degrees")
+print(f"Angle: {(angle):.2f} degrees")
 
 
 
