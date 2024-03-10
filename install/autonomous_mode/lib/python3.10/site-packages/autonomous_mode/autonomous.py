@@ -205,7 +205,7 @@ class navigating_point(Node):
         self.target_pos_x_ned=self.shared_variables.vehicle_local_pos.x
         self.target_pos_y_ned=self.shared_variables.vehicle_local_pos.y
         self.target_angle=self.drone_curr_angle
-        self.target_wp=[ (12.8369923,80.1369481),(12.8367105,80.1370183)]
+        self.target_wp=[ (47.3978404,8.545674199999999),(47.3978849, 8.545671128868838),(47.3976986, 8.5458848),(47.3977672,8.5456433)]
         # self.target_wp=[(12.8374937, 80.1374365),[12.8370584, 80.1372932]]
         self.target_angle=self.drone_curr_angle
         self.present_wp=0
@@ -451,8 +451,8 @@ class navigating_point(Node):
 
             #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,x_vel,0.0,0.0,self.drone_curr_angle)
 
-            velocity_scale_x = max(0.4, diff_x / 10.0) 
-            x_vel = velocity_scale_x * 2.0
+            velocity_scale_x = max(0.8, diff_x / 10.0) 
+            x_vel = velocity_scale_x * 1.0
             if current_x>target_pos_x:
                     x_vel=-x_vel
             self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,x_vel,0.0,0.0,self.drone_curr_angle)
@@ -482,8 +482,8 @@ class navigating_point(Node):
 
             #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,y_vel,0.0,self.drone_curr_angle)
 
-                velocity_scale_y = max(0.4, diff_y/ 10) 
-                y_vel = velocity_scale_y * 2.0
+                velocity_scale_y = max(0.8, diff_y/ 10) 
+                y_vel = velocity_scale_y * 1.0
                 if current_y>target_pos_y:
                     y_vel=-y_vel
                 
