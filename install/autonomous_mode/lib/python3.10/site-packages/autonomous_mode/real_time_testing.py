@@ -208,8 +208,8 @@ class navigating_point(Node):
         self.target_pos_x_ned=self.shared_variables.vehicle_local_pos.x
         self.target_pos_y_ned=self.shared_variables.vehicle_local_pos.y
         self.target_angle=self.drone_curr_angle
-        self.target_wp=[ (47.3978404,8.545674199999999),(47.3978849, 8.545671128868838),(47.3976986, 8.5458848),(47.3977672,8.5456433)]
-        # self.target_wp=[(12.8374937, 80.1374365),[12.8370584, 80.1372932]]
+        self.target_wp=[ (47.3978404,8.545674199999999),(47.3978849, 8.545671128868838),(47.3976986, 8.5458848),(47.3977672,8.5456433),(47.3978404,8.545674199999999),(47.3975258873026,8.545886082855873),(47.39763379228936, 8.54564719374099)]
+
         self.target_angle=self.drone_curr_angle
         self.present_wp=0
         self.x_ned=0.0
@@ -406,16 +406,16 @@ class navigating_point(Node):
             diff_y=abs(current_y-target_pos_y)
         
         
-        if diff_x>0.3 and not self.reached_x:
+        if diff_x>0.2 and not self.reached_x:
             
 
 
-            if diff_x>0.5:
-                x_vel=2.0
+            if diff_x>0.7:
+                x_vel=3.0
             else:
                 self.reached_x=True
                 print("Reached_X")
-                self.publish_pos_vel_setpoint(target_pos_x,current_y,self.take_off_h-0.5,1.0,0.5,0.0,0.0)
+                self.publish_pos_vel_setpoint(target_pos_x,current_y,self.take_off_h-0.5,2.5,0.0,0.0,0.0)
                 return False
 
             if current_x>target_pos_x:
@@ -430,13 +430,13 @@ class navigating_point(Node):
         
 
 
-        elif diff_y>0.3 and not self.reached_y:
+        elif diff_y>0.2 and not self.reached_y:
 
 
-                if diff_y>0.5:
-                    y_vel=2.0
+                if diff_y>0.7:
+                    y_vel=3.0
                 else:
-                    self.publish_pos_vel_setpoint(current_x,target_pos_y,self.take_off_h-0.5,1.0,0.0,0.0,0.0)
+                    self.publish_pos_vel_setpoint(current_x,target_pos_y,self.take_off_h-0.5,0.0,2.5,0.0,0.0)
                     self.reached_y=True
                     print("Reached_y")
                     return False
@@ -450,7 +450,7 @@ class navigating_point(Node):
                 
                 return False
         
-        elif diff_x<=0.3 and diff_y<=0.3:
+        elif diff_x<=0.2 and diff_y<=0.2:
             self.publish_pos_vel_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,0.0,0.0,0.0,0.0)
             return True
         
@@ -473,7 +473,7 @@ class navigating_point(Node):
     
     def get_yaw_angle(self,yaw_angle:float):
 
-        return -yaw_angle
+        return 1.57-yaw_angle
     
     def loiter_around(self,time:float):
 
@@ -531,7 +531,11 @@ class navigating_point(Node):
 
                 self.reached=self.navigate_to_point(self.target_pos_x_ned,self.target_pos_y_ned)
                 print(self.reached)
+
+                # self.publish_pos_vel_setpoint(-13.0,3.0,self.take_off_h-0.5,0.0,0.0,0.0,self.drone_curr_angle)
                 
+
+ 
             
         elif self.reached:
             time.sleep(5.0)
@@ -539,7 +543,7 @@ class navigating_point(Node):
             self.present_wp+=1
 
             if self.present_wp==len(self.target_wp):
-                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_RETURN_TO_LAUNCH)
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
                 print(self.reached_wp)
                 self.landed=True
             else:

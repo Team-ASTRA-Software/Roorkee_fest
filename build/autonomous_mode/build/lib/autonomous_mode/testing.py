@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus,VehicleAttitudeSetpoint,VehicleAttitude,SensorGps,VehicleGlobalPosition,VehicleTrajectoryWaypoint,TrajectoryWaypoint,DifferentialDriveSetpoint,GotoSetpoint
+from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus,VehicleAttitudeSetpoint,VehicleAttitude,SensorGps,VehicleGlobalPosition,VehicleTrajectoryWaypoint,TrajectoryWaypoint,DifferentialDriveSetpoint,GotoSetpoint,VelocityLimits,VehicleControlMode
 from geometry_msgs.msg import Quaternion
 import math
 from rclpy.executors import MultiThreadedExecutor
@@ -193,8 +193,6 @@ class navigating_point(Node):
             VehicleCommand, '/fmu/in/vehicle_command', qos_profile)
         self.vehicle_trajectory_publisher = self.create_publisher(
             TrajectoryWaypoint, '/fmu/in/trajectory_waypoint', qos_profile)
-        self.diff_drive_publisher = self.create_publisher(
-            DifferentialDriveSetpoint, '/fmu/in/differential_drive_setpoint', qos_profile)
         self.goto_publisher = self.create_publisher(
             GotoSetpoint, '/fmu/in/goto_setpoint', qos_profile)
 
@@ -203,28 +201,18 @@ class navigating_point(Node):
         self.take_off_h=-25.0
         self.takeoff_done=False
         self.reached=False
-        self.timer = self.create_timer(0.4, self.timer_callback_2)
+        self.timer = self.create_timer(0.1, self.timer_callback_2)
         self.get_data=False
         self.yaw=False
         self.target_pos_x_ned=self.shared_variables.vehicle_local_pos.x
         self.target_pos_y_ned=self.shared_variables.vehicle_local_pos.y
         self.yaw_first=False
-        # #   latitude: 47.39774927675293
-        # #   longitude: 8.545609936196678
-        # #   latitude: 47.39779806134497
-        # #   longitude: 8.545671128868838
-        # #   latitude: 47.39779371134151
-        # #   longitude: 8.545604635710545
-            #  47.3978404
-            #  8.545674199999999
-            # 47.3978849
-            #  8.5455413
-            # latitude_deg: 47.3976986
-            # longitude_deg: 8.5458848
-            # latitude_deg: 47.3977672
-            # longitude_deg: 8.5456433
+                # lat: 47.3975258873026
+                # lon: 8.545886082855873
+                # lat: 47.39763379228936
+                # lon: 8.54564719374099
         self.target_angle=self.drone_curr_angle
-        self.target_wp=[ (47.3978404,8.545674199999999),(47.3978849, 8.545671128868838),(47.3976986, 8.5458848),(47.3977672,8.5456433),(47.3978404,8.545674199999999)]
+        self.target_wp=[ (47.3978404,8.545674199999999),(47.3978849, 8.545671128868838),(47.3976986, 8.5458848),(47.3977672,8.5456433),(47.3978404,8.545674199999999),(47.3975258873026,8.545886082855873),(47.39763379228936, 8.54564719374099)]
         # self.target_wp=[(12.837136, 80.137078),[12.837617, 80.136565]]
         self.reached_wp=[]
         self.target_angle=self.drone_curr_angle
@@ -336,7 +324,7 @@ class navigating_point(Node):
         
         
         self.trajectory_setpoint_publisher.publish(msg)
-        time.sleep(2.0)
+
         
         self.get_logger().info(f"Publishing position setpoints {[x, y, z,x_vel,y_vel,z_vel]}")
 
@@ -347,9 +335,11 @@ class navigating_point(Node):
         msg.position=[x,y,z]
         msg.flag_control_heading=True
         msg.flag_set_max_horizontal_speed=True
+        msg.flag_set_max_heading_rate=True
+        msg.flag_set_max_vertical_speed=True
         msg.heading=yaw_angle
-        msg.max_horizontal_speed=3.0
-        msg.max_vertical_speed=3.0
+        msg.max_horizontal_speed=2.0
+        msg.max_vertical_speed=2.0
         msg.max_heading_rate=0.2
 
         
@@ -361,22 +351,6 @@ class navigating_point(Node):
         self.goto_publisher.publish(msg)
         
         self.get_logger().info(f"Publishing go to setpoints {[x, y, z]}")
-
-    def def_drive(self,speed:float,yaw_angle:float):
-        """Publish the trajectory setpoint."""
-        msg = DifferentialDriveSetpoint()
-        msg.speed=speed
-        msg.yaw_rate=1.0 
-        
-        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        
-        
-        
-        
-        self.diff_drive_publisher.publish(msg)
-        time.sleep(2.0)
-        
-
 
 
 
@@ -474,101 +448,26 @@ class navigating_point(Node):
         else:
             diff_y=abs(current_y-target_pos_y)
     
-        print(f"{diff_angle}")
-        print(f"{target_angle}")
-        print(f"{current_angle}")
+        print(f"Target_pos_x:{target_pos_x},{target_pos_y}")
 
-        if diff_angle>0.1 and self.yaw_first==False:
-            self.go_setpoint(current_x,current_y,self.take_off_h-0.5,target_angle)
+        if current_z>self.take_off_h:
+            self.go_setpoint(current_x,current_y,self.take_off_h-0.5,0.0)
+        
             return False
         
-        elif diff_angle<=0.1 and self.yaw_first==False:
-            self.yaw_first=True
-            return False
-        
-        elif self.yaw_first==True and diff_x>0.2 and diff_y>0.2:
-            print("k")
-            self.go_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,target_angle)
-            return False
 
-        elif diff_x<=0.2 and diff_y<=0.2 and self.yaw_first==True:
-            self.go_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,target_angle)
+        if diff_x<=0.2 and diff_y<=0.2 :
+            self.go_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,0.0)
             return True
         
-
-        # elif diff_angle>0.2:
-        #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,0.0,0.0,angle)
-        #     return False
-        # elif diff_angle>0.1:
-        #     self.publish_pos_vel_setpoint(current_x,current_y,current_z,0.0,0.0,0.0,target_angle)
-        #     return False
-        # elif diff_x>0.3:
-            
-        #     # if abs(current_vel_x)>=1.0:
-        #     #     req_vel=1.0
-        #     #     x_vel=current_vel_x-req_vel
-        #     #     print(current_vel_x)
-        #     #     if current_vel_x>0:
-        #     #         x_vel=-x_vel
-            
-            
-            
-
-
-        #     # if diff_x>2.0:
-        #     #     if current_x>target_pos_x:
-        #     #         x_vel=-4.0
-        #     #     else:
-        #     #         x_vel=4.0
-
-
-        #     #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,x_vel,0.0,0.0,self.drone_curr_angle)
-
-        #     velocity_scale_x = max(0.4, diff_x / 10.0) 
-        #     x_vel = velocity_scale_x * 2.0
-        #     if current_x>target_pos_x:
-        #             x_vel=-x_vel
-        #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,x_vel,0.0,0.0,self.drone_curr_angle)
-
-
-        #     return False
-        # elif diff_y>0.3:
-
-        #     # if abs(current_vel_y)>=1.0:
-        #     #     req_vel=1.0
-        #     #     y_vel=current_vel_y-req_vel
-        #     #     print(current_vel_y)
-        #     #     if current_vel_y>0:
-        #     #         y_vel=-y_vel
-
-
-        #     # if target_pos_y>current_y:
-        #     #     y_vel=-y_vel
-            
-
-        #     # if diff_y>2.0:
-        #     #     if current_y>target_pos_y:
-        #     #         y_vel=-4.0
-        #     #     else:
-        #     #         y_vel=4.0
-
-
-        #     #     self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h,0.0,y_vel,0.0,self.drone_curr_angle)
-
-        #         velocity_scale_y = max(0.4, diff_y/ 10) 
-        #         y_vel = velocity_scale_y * 2.0
-        #         if current_y>target_pos_y:
-        #             y_vel=-y_vel
-                
-
-        #         self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,y_vel,0.0,self.drone_curr_angle)
-        #         return False
-            
-
-        
-        
         else:
+            print("k")
+            self.go_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,0.0)
             return False
+        
+
+        
+       
 
         
         
@@ -625,7 +524,7 @@ class navigating_point(Node):
             if self.takeoff_done:
                 self.publish_pos_vel_setpoint(current_x,current_y,self.take_off_h-0.5,0.0,0.0,0.0,self.drone_curr_angle)
                 
-                self.loiter_around(10.0)
+                time.sleep(2.0)
             print(self.takeoff_done)
                 
 
@@ -646,7 +545,7 @@ class navigating_point(Node):
                 
             
         elif self.reached:
-            self.loiter_around(10.0)
+            time.sleep(5.0)
             self.reached_wp.append((self.shared_variables.vehicle_glob_pos.lat,self.shared_variables.vehicle_glob_pos.lon))
             self.present_wp+=1
 
