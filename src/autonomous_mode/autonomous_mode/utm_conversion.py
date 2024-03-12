@@ -74,12 +74,12 @@ def calculate_distance_and_angle(utm1, utm2):
 # Example UTM coordinates (replace with your values)
 utm_coordinate1 = utm.from_latlon( 
 
-47.39763435349048, 8.545647383646875
+47.39783999692853, 8.545675545629116
 
 
 
  )
-utm_coordinate2 = utm.from_latlon(47.39763379228936, 8.54564719374099)
+utm_coordinate2 = utm.from_latlon(47.3978404,8.545674199999999)
 
 
 # (12.836636,80.136542),(12.836692,80.137059)

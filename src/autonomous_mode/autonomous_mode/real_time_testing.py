@@ -198,7 +198,7 @@ class navigating_point(Node):
 
         
         self.drone_curr_angle=self.get_drone_angle()
-        self.take_off_h=-25.0
+        self.take_off_h=-10.0
         self.takeoff_done=False
         self.reached=False
         self.timer = self.create_timer(0.1, self.timer_callback_2)
@@ -411,11 +411,11 @@ class navigating_point(Node):
 
 
             if diff_x>0.7:
-                x_vel=3.0
+                x_vel=2.5
             else:
                 self.reached_x=True
                 print("Reached_X")
-                self.publish_pos_vel_setpoint(target_pos_x,current_y,self.take_off_h-0.5,2.5,0.0,0.0,0.0)
+                self.publish_pos_vel_setpoint(target_pos_x,current_y,self.take_off_h-0.5,1.5,0.0,0.0,0.0)
                 return False
 
             if current_x>target_pos_x:
@@ -434,9 +434,9 @@ class navigating_point(Node):
 
 
                 if diff_y>0.7:
-                    y_vel=3.0
+                    y_vel=2.5
                 else:
-                    self.publish_pos_vel_setpoint(current_x,target_pos_y,self.take_off_h-0.5,0.0,2.5,0.0,0.0)
+                    self.publish_pos_vel_setpoint(current_x,target_pos_y,self.take_off_h-0.5,0.0,1.5,0.0,0.0)
                     self.reached_y=True
                     print("Reached_y")
                     return False
@@ -449,7 +449,7 @@ class navigating_point(Node):
 
                 
                 return False
-        
+            
         elif diff_x<=0.2 and diff_y<=0.2:
             self.publish_pos_vel_setpoint(target_pos_x,target_pos_y,self.take_off_h-0.5,0.0,0.0,0.0,0.0)
             return True
@@ -543,9 +543,12 @@ class navigating_point(Node):
             self.present_wp+=1
 
             if self.present_wp==len(self.target_wp):
-                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
-                print(self.reached_wp)
-                self.landed=True
+                with open('gps_coordinates.txt', 'w') as file:
+                    self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
+                    print(f"Cordinates:{self.reached_wp}")
+                    file.write(f"Cordinate:{self.reached_wp}")
+                    self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
+                    self.landed=True
             else:
                 self.get_data=False
                 self.reached=False   
