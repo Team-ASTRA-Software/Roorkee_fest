@@ -22,7 +22,21 @@ def haversine_distance(coord1, coord2): #Function to find distance between any t
 
     return distance
 
-def shortest_path(start,waypoints): #Function to find the shortest path with given a starting point and a list of waypoints
+def utm_dist(coord1,coord2): #To find Manhattan Distance between any two points
+    lat1 = coord1[0]
+    lon1 = coord1[1]
+    lat2 = coord2[0]
+    lon2 = coord2[1]
+
+    coord3=(lat2,lon1)
+    distance=haversine_distance(coord1,coord3)+haversine_distance(coord3,coord2)
+
+    return distance
+
+
+
+
+def shortest_path_haversine(start,waypoints): #Function to find the shortest path with given a starting point and a list of waypoints
     path=list()
     path.append(start)
     all_points=waypoints.copy()
@@ -47,12 +61,39 @@ def shortest_path(start,waypoints): #Function to find the shortest path with giv
     return path          
 
 
+
+def shortest_path_utm(start,waypoints): #Function to find the shortest path with manhattan distance given a starting point and a list of waypoints
+    path=list()
+    path.append(start)
+    all_points=waypoints.copy()
+    all_points=[start]+all_points
+    curr_pos=start
+    
+    while(len(path)<len(waypoints)+1):
+        mind=100000000
+        for w1 in all_points:
+            
+            if w1!=curr_pos:
+                dist=utm_dist(w1, curr_pos)
+                if dist<=mind:
+                    mind=dist
+                    minp=w1
+        path.append(minp)
+        all_points.remove(curr_pos)
+        # print("Itr done",curr_pos , all_points)
+        curr_pos=minp
+        
+
+    return path          
+
+
+
 # Example usage:
 start = (12.8374937, 80.1374365)  # Starting GPS Coordinates
 # end = (12.8367525, 80.136861)  # Ending GPS Coordinates
 waypoints = [(12.8370584, 80.1372932), (12.8369901, 80.1368858),(12.837443,80.136949),(12.837335,80.137838)]  # Coordinates of all the waypoints in between
 
-result = shortest_path(start, waypoints)
+result = shortest_path_utm(start, waypoints)
 
 print("Shortest Path:", result)
 
