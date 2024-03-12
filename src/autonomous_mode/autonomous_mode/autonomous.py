@@ -547,7 +547,7 @@ class navigating_point(Node):
                     self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
                     print(f"Cordinates:{self.reached_wp}")
                     file.write(f"Cordinate:{self.reached_wp}")
-                    self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_PRECLAND)
+                    
                     self.landed=True
             else:
                 self.get_data=False
